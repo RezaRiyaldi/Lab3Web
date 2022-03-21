@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lanjutan</title>
+    <style>
+        form p>label {
+            display: inline-block;
+            width: 100px;
+        }
+        
+        form input[type="text"],
+        form textarea {
+            border: 1px solid #197a43;
+        }
+        
+        form input[type="submit"] {
+            border: 1px solid #197a43;
+            background-color: #197a43;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Membuat Form</h1>
+    </header>
+    <form action="proses.php" method="post">
+        <fieldset>
+            <legend>Data Pelanggan</legend>
+            <p>
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama">
+            </p>
+            <p>
+                <label for="alamat">Alamat</label>
+                <textarea id="alamat" name="alamat" cols="20" rows="3"></textarea>
+            </p>
+            <p>
+                <label>Jenis Kelamin</label>
+                <input id="jk_l" type="radio" name="kelamin" value="L" />
+                <label for="jk_l">Laki-laki</label>
+
+                <input id="jk_p" type="radio" name="kelamin" value="P" />
+                <label for="jk_p">Perempuan</label>
+            </p>
+            <p>
+                <label>Golongan Darah</label>
+
+                <select name="gol_dar" id="gol_dar">
+                    <option>- Pilih golongan darah -</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>
+                </select>
+            </p>
+
+            <p>
+                <label>Hobi</label>
+
+                <select name="gol_dar" id="gol_dar" multiple size="5">
+                    <option>- Pilih Hobi -</option>
+                    <option value="Sepak Bola">Sepak Bola</option>
+                    <option value="Berenang">Berenang</option>
+                    <option value="Badminton">Badminton</option>
+                    <option value="Bermain Alat Musik">Bermain Alat Musik</option>
+                    <option value="Memasak">Memasak</option>
+                    <option value="Membaca">Membaca</option>
+                </select>
+            </p>
+
+            <p><input type="submit" value="Login"></p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
